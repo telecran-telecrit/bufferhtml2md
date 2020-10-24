@@ -1,24 +1,24 @@
 clipboard2markdown
 ==================
 
-> Easily convert richly formatted text or HTML to
+Demo
+----
+
+### Interactive
+
+<https://telecran-telecrit.github.io/bufferhtml2md/ >
+
+### Video
+
+![Screencast](screencast.gif)
+
+> Easily convert formatted text from LibreOffice, CKEditor or HTML Browser to
 > [Markdown](http://daringfireball.net/projects/markdown/syntax).
 > Use the clipboard and paste to Markdown with a single keypress.
 >
 > The conversion is carried out by
 > [to-markdown](https://github.com/domchristie/to-markdown),
 > a Markdown converter running in the browser.
-
-Demo
-----
-
-### Interactive
-
-<http://euangoddard.github.io/clipboard2markdown/>
-
-### Video
-
-![Screencast](screencast.gif)
 
 Usage
 -----
@@ -41,8 +41,8 @@ One can paste multiple times. This overwrites the previous conversion.
 About
 -----
 
+[bufferhtml2md](https://github.com/telecran-telecrit/bufferhtml2md)
 [clipboard2markdown](https://github.com/euangoddard/clipboard2markdown)
-was created by [Euan Goddard](https://github.com/euangoddard).
 The original version used
 [html2markdown](https://github.com/kates/html2markdown) by
 [Kates Gasis](https://github.com/kates) and
