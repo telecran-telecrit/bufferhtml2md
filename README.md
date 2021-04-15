@@ -1,4 +1,4 @@
-clipboard2markdown
+From clipboard buffer html to markdown (bufferhtml2md)
 ==================
 
 Demo
