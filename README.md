@@ -6,21 +6,14 @@ Demo
 
 ### Interactive
 
-<https://telecran-telecrit.github.io/bufferhtml2md/ >
-
-### Video
-
-![Screencast](screencast.gif)
+[Live html Buffer to Markdown](https://telecran-telecrit.github.io/bufferhtml2md/)
 
 > Easily convert formatted text from LibreOffice, CKEditor or HTML Browser to
-> [Markdown](http://daringfireball.net/projects/markdown/syntax).
+> [Markdown](https://daringfireball.net/projects/markdown/syntax).
 > Use the clipboard and paste to Markdown with a single keypress.
 >
-> The conversion is carried out by
-> [to-markdown](https://github.com/domchristie/to-markdown),
-> a Markdown converter running in the browser.
 
-Usage
+### Usage
 -----
 
 Open [index.html](index.html) in a favorite browser and hit `Ctrl+C`
