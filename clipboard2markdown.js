@@ -127,7 +127,9 @@
   };
 
   var convert = function (str) {
-    return escape(toMarkdown(str, { converters: pandoc, gfm: true }));
+    var tms = ToMarkdownService ({ rules: pandoc});
+    ToMarkdownPluginGfm.gfm(tms);
+    return escape(tms.turndown(str)/*, { converters: pandoc, gfm: true })*/);
   }
 
   var insert = function (myField, myValue) {
