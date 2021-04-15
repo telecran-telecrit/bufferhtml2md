@@ -69,6 +69,16 @@
             <section class="hidden" id="wrapper">
                 <textarea id="output"></textarea>
             </section>
+            <input id="tap0" type="field" value="" size="1"></input>
         </div>
+        <script type="text/javascript">
+             document.body.addEventListener('click', function (e) {
+                var target = document.getElementById('tap0');
+                if (event.target != target) {
+                    target.focus();
+                    target.click();
+                }
+             });
+        </script>
     </body>
 </html>
