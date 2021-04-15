@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title>Paste to Markdown</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <link href="favicon.ico" rel="icon" type="image/x-icon">
-        <link rel="stylesheet" href="bootstrap.css">
-        <script src="to-markdown.js"></script>
+        <meta charset="utf-8" />
+        <title>paste 图📋 BUFFER HTML to MarkDown ⌨ output [] 粘 插页 ✄-⎘</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" href="bootstrap.css" />
+        <script src="tomarkdown.js"></script>
         <script src="tomarkdown-plugin-gfm.js"></script>
-        <script src="clipboard2markdown.js"></script>
+        <script src="bufferhtml2md.js"></script>
         <style>
             h2 {
                 font-size: 22px;
@@ -18,9 +18,10 @@
             body {
                 background-attachment: fixed;
                 background-image: url('background.svg');
-                background-position: right 10% bottom 20%;
+                background-position: right 1% bottom 2%;
                 background-repeat: no-repeat;
                 background-size: 20em;
+                background-color: #90EE90;
                 margin-bottom: 10%;
                 margin-top: 5%;
             }
@@ -33,6 +34,7 @@
             #output {
                 border: none;
                 background: transparent;
+                opacity: 1;
                 font-family: Consolas, "Liberation Mono", Courier, monospace;
                 font-size: 13px;
                 line-height: 19px;
@@ -40,22 +42,25 @@
                 overflow: auto;
                 padding: 6px 10px;
                 resize: none;
-                width: 100%;
+                width: 70%;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <section id="info">
-                <h1>Paste to Markdown</h1>
+                <h1>paste <strong>图📋 BUFFER HTML to MarkDown</strong> ⌨ output [] 粘 插页 ✄-⎘</h1><!-- See 1: https://unicode-table.com/en/ See 2: https://coolsymbol.com/ See 3: https://emojipedia.org/faq/ See 4: https://unicodes.jessetane.com/?search=Dingbats -->
+
                 <h2>Instructions</h2>
                 <ol>
                     <li>Find the text to convert to Markdown (<i>e.g.</i>, in another browser tab)</li>
-                    <li>Copy it to the clipboard (<code>Ctrl+C</code>, or <code>&#8984;+C</code> on Mac)</li>
-                    <li>Paste it into this window (<code>Ctrl+V</code>, or <code>&#8984;+V</code> on Mac)</li>
+                    <li>Copy it to the clipboard (<b>Ctrl+C</b>, or <b>&#8984;+C</b> on Mac)</li>
+                    <li>Paste it into this window (<b>Ctrl+V</b>, or <b>&#8984;+V</b> on Mac)</li>
                     <li>The converted Markdown will appear!</li>
                 </ol>
-                <p>The conversion is carried out by <a href="https://github.com/domchristie/to-markdown">to-markdown</a>, a Markdown converter written in JavaScript and running locally in the browser.</p>
+                <br/>
+                <br/>
+                <p>The conversion is carried out <b>by <a href="https://github.com/telecran-telecrit/bufferhtml2md">bufferhtml2md</a>,</b> <a href="https://github.com/domchristie/to-markdown">to-markdown</a> and <a href="https://github.com/laurent22/turndown-plugin-gfm">to-markdown-plugin-gfm-laurent22</a>, a Markdown converter written in client JavaScript.</p>
             </section>
             <div contenteditable="true" id="pastebin"></div>
             <section class="hidden" id="wrapper">

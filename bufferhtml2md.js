@@ -1,5 +1,16 @@
 (function () {
   'use strict';
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2018-2021 TelEcran-TelEcrit
+ * Copyright (c) 2017-2018 Laurent
+ * Copyright (c) 2015-2017 Dom Christie
+ * Copyright (c) 2014-2016 Euan Goddard
+ * Copyright (c) 2011-2014 Dom Christie
+ *
+ * https://telecran-telecrit.github.io/bufferhtml2md/
+ */
 
   // http://pandoc.org/README.html#pandocs-markdown
   var pandoc = [

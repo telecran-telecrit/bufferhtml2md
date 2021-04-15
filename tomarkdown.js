@@ -6,7 +6,7 @@
 /*
  * to-markdown (ToMarkdownService.turndown) - an HTML to Markdown converter
  *
- * Copyright 2017+, Dom Christie
+ * Copyright 2018+, Dom Christie
  * Licenced under the MIT licence
  *
  */

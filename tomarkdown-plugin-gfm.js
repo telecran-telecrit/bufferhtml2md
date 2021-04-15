@@ -1,5 +1,12 @@
-var ToMarkdownPluginGfm = (function (exports) {
-'use strict';
+var ToMarkdownPluginGfm = (function (exports) {'use strict';
+/*
+ * to-markdown-plugin-gfm (ToMarkdownPluginGfm.gfm(toMarkdownService)) - a plugin which adds GitHub Flavored Markdown extensions aka GFM: strikethrough, taskListItems, tables.
+ *
+ * Copyright 2018+, Dom Christie and Laurent 
+ * Licenced under the MIT licence
+ *
+ * https://github.com/laurent22/turndown-plugin-gfm
+ */
 
 var highlightRegExp = /highlight-(?:text|source)-([a-z0-9]+)/;
 
@@ -73,13 +80,21 @@ rules.table = {
   // Only convert tables with a heading row.
   // Tables with no heading row are kept using `keep` (see below).
   filter: function (node) {
-    return node.nodeName === 'TABLE' && isHeadingRow(node.rows[0])
+    return node.nodeName === 'TABLE'
   },
 
-  replacement: function (content) {
+  replacement: function (content, node) {
+    // If table has no heading, add an empty one so as to get a valid Markdown table
+    var firstRow = node.rows.length ? node.rows[0] : null;
+    var columnCount = firstRow ? firstRow.childNodes.length : 0;
+    var emptyHeader = '';
+    if (columnCount && !isHeadingRow(firstRow)) {
+      emptyHeader = '|' + '     |'.repeat(columnCount) + '\n' + '|' + ' --- |'.repeat(columnCount);
+    }
+
     // Ensure there are no blank lines
     content = content.replace('\n\n', '\n');
-    return '\n\n' + content + '\n\n'
+    return '\n\n' + emptyHeader + content + '\n\n'
   }
 };
 
@@ -129,7 +144,7 @@ function cell (content, node) {
 
 function tables (turndownService) {
   turndownService.keep(function (node) {
-    return node.nodeName === 'TABLE' && !isHeadingRow(node.rows[0])
+    return node.nodeName === 'TABLE'
   });
   for (var key in rules) turndownService.addRule(key, rules[key]);
 }
