@@ -72,7 +72,7 @@
             <input id="tap0" type="field" value="" size="1"></input>
         </div>
         <script type="text/javascript">
-             document.body.addEventListener('click', function (e) {
+             document.body.addEventListener('click', function listenClick (e) {
                 var target = document.getElementById('tap0');
                 target.style.visibility = "visible";
                 if (event.target != target) {
@@ -81,6 +81,7 @@
                 } else {
                     setTimeout(function() {
                         target.style.visibility = "hidden";
+                        document.body.removeEventListener('click', listenClick);
                     }, 3000);
                 }
              });
